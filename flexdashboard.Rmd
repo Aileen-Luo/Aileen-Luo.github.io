@@ -14,6 +14,7 @@ library(plotly)
 library(ggExtra)
 ```
 
+dataset from "ny_noaa"
 ```{r, echo=FALSE}
 set.seed(1)
 
@@ -38,7 +39,7 @@ Column {data-width=650}
 ny_tidy %>%
   ggplot(aes(x = tmax_c, y = tmin_c)) +
   geom_hex() + 
-  theme(legend.position = "bottom") +
+  theme(legend.position = "right") +
   labs(
     title = "tmax_c vs tmin_c",
     x = "maximum temperature (˚C)",
@@ -71,5 +72,6 @@ filter(year %in% c("2001", "2002", "2003", "2004","2005", "2006", "2007", "2008"
   summarize(mean_tmin = mean(tmin_c),
             mean_tmax = mean(tmax_c)) %>% 
   plot_ly(x = ~mean_tmin, y = ~mean_tmax, type = "scatter", mode = "markers",
-          color = ~year)
+          color = ~year) %>% 
+  layout(title = "Average Min and Max Temperature from 2001 to 2010 by month")
 ```
