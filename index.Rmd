@@ -8,6 +8,6 @@ Hello! Thanks for finding me.
 
 This website include:
 
-- Resume 
+* [Resume](Resume.html) 
 * An example of flexdashboard 
 * About this page, my github and my email (Just in the right corner!)

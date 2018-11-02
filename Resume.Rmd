@@ -1,0 +1,58 @@
+---
+title: "Resume"
+Arthur: "Aileen (Man) Luo"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Personal Information:
+Man Luo
+  
+ml4239@cumc.columbia.edu, 917-743-2452
+  
+100 Haven Ave New York, NY, 10032
+
+###Education:
+
+- Columbia University in the City of New York
+
+New York, N.Y. 
+  
+Master of Science, Biostatistics 
+  
+Expected Graduation May. 2020
+
+- Sichuan University
+
+SiChuan, P.R. China, Sept. 2014 - Jul. 2018
+  
+Bachelor of Science, Double Majors in Statistics, Finance 
+  
+Major Courses: Mathematical Analysis, Probability and Statistics, Advanced Algebra, Multivariate Statistical Analysis, Time Series Analysis, Financial Economics,  Options, Futures and Other Derivativesetc.
+
+###Research Experience:
+
+- INVESTIGATION ON THE PROTECTION OF N95 RESPIRATOR MASK ON HEALTHY PEOPLE\'S RESPIRATORY SYSTEM 
+
+  Data analysis \& Mathematical Modeling   
+  Dec. 2016 - Nov. 2017  
+  Created a quantitative method for deciding sample size in the health sciences coded in Python  
+  Analyzed the data to determine the morphological changes of the respiratory system, research received province reward
+	
+-	STUDY ON THE ALLOCATION OF ONLINE-ORDERED TAXI RESOURCE
+
+  Data analysis \& Mathematical Modeling   
+  Oct. 2016 - Jun. 2017  
+  Collected data from taxi software on the driving route, place of stay, load factor, pricing system and the subsidy policy data and cleaned data coded in R and SAS  
+	Built a taxi supply and demand model and a multiple-linear regression models  
+	Establish the passenger satisfaction model and carried on the reasonable demonstration, the analysis error and the correlation, research received school-wide award
+	
+- A DYNAMIC MODEL OF WATER SECURITY LEVEL IN BEIJING 
+
+  Data analysis \& Mathematical Modeling   
+  Mar. 2016 - Mar. 2017  
+  Established a dynamic mathematical model based on the differential equations compared with static models that are being applied today coded in Matlab  
+	Considered the political factors and quantified them, Nationwide awarded
+
