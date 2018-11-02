@@ -1,0 +1,75 @@
+---
+title: "flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(p8105.datasets)
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(ggExtra)
+```
+
+```{r, echo=FALSE}
+set.seed(1)
+
+data("ny_noaa")
+
+ny_tidy<-ny_noaa %>% 
+  select(id,date,tmax, tmin) %>% 
+  separate(col = date, into = c("year", "month", "day"), sep = '-') %>% 
+    mutate(tmax_c = as.numeric(tmax) /10,
+         tmin_c = as.numeric(tmin) /10,
+        ) %>% 
+  filter(tmin_c != "NA") %>% 
+  filter(tmax_c != "NA")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r,echo = FALSE, warning=FALSE}
+ny_tidy %>%
+  ggplot(aes(x = tmax_c, y = tmin_c)) +
+  geom_hex() + 
+  theme(legend.position = "bottom") +
+  labs(
+    title = "tmax_c vs tmin_c",
+    x = "maximum temperature (˚C)",
+    y = "minimum temperature (˚C)"
+  )
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r,echo = FALSE, warning=FALSE}
+ny_tidy %>% 
+  filter(month == "01", year %in% c("2005", "2006", "2007", "2008", "2009", "2010")) %>%
+  group_by(id, year, month) %>% 
+  summarize(mean_tmin = mean(tmin_c)) %>% 
+  plot_ly(y = ~mean_tmin, color = ~year, type = "box",
+          colors = "Set2") %>% 
+  layout(title = "Average Min Temperature in November from 2005 to 2010)")
+```
+
+### Chart C
+
+```{r,echo = FALSE, warning=FALSE}
+ny_tidy %>% 
+filter(year %in% c("2001", "2002", "2003", "2004","2005", "2006", "2007", "2008", "2009", "2010")) %>%
+  group_by(year,month) %>% 
+  summarize(mean_tmin = mean(tmin_c),
+            mean_tmax = mean(tmax_c)) %>% 
+  plot_ly(x = ~mean_tmin, y = ~mean_tmax, type = "scatter", mode = "markers",
+          color = ~year)
+```

@@ -9,5 +9,5 @@ Hello! Thanks for finding me.
 This website include:
 
 * [Resume](Resume.html) 
-* An example of flexdashboard 
+* An example of [flexdashboard](flexdashboard.html) 
 * About this page, my github and my email (Just in the right corner!)
