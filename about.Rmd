@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+### About this site
+
+This website is my first persoanl website. 
+
+It was made with the knowledge that I learned from P8105 Data Science. The source code and template can be found it the class website. 
+
+It will be edited later after my submission of homework 4 because I found hosting my own website is interesting!

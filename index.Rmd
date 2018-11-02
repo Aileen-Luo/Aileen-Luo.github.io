@@ -1,0 +1,13 @@
+---
+title: "Aileen-Luo's Website"
+---
+
+###introduction of landing page
+
+Hello! Thanks for finding me.
+
+This website include:
+
+- Resume 
+* An example of flexdashboard 
+* About this page, my github and my email (Just in the right corner!)
